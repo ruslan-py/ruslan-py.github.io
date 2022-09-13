@@ -91,6 +91,6 @@ let usercard = document.getElementById("usercard");
 
 let p = document.createElement("p");
 
-p.innerText = "Вы выбрали кровать!";
+p.innerText = "@rutwin";
 
 usercard.appendChild(p);
