@@ -7,15 +7,21 @@ body {
 }
 
 .container {
-    max-width: 390px;
+    max-width: 370px;
     margin: 100px;
+}
+
+.inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 200px 200px;
 }
 
 .btn {
     display: inline-block;
     padding: 10px 20px;
     border: none;
-    background: rgb(248, 168, 24);
+    background: #0759A3;
     border-radius: 10px;
     color: #fff;
     text-transform: uppercase;
@@ -25,5 +31,9 @@ body {
 }
 
 .btn:hover {
-    background: lightgreen;
+    background: #07A358;
+}
+
+.usercard {
+    text-align: center;
 }

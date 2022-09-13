@@ -7,15 +7,77 @@ tg.MainButton.color = "#2cab37";
 
 let btn = document.getElementById("btn");
 
-let item = '0';
+let item = "";
 
-btn.addEventListener("click", function(){
+let btn1 = document.getElementById("btn1");
+let btn1 = document.getElementById("btn2");
+let btn1 = document.getElementById("btn3");
+let btn1 = document.getElementById("btn4");
+let btn1 = document.getElementById("btn5");
+let btn1 = document.getElementById("btn6");
+
+btn1.addEventListener("click", function(){
     if (tg.MainButton.isVisible) {
         tg.MainButton.hide();
     }
     else {
-        tg.MainButton.setText("Вы выбрали товар 1!");
+        tg.MainButton.setText("Вы выбрали кресло!");
         item = '1';
+        tg.MainButton.show();
+    }
+});
+
+btn2.addEventListener("click", function(){
+    if (tg.MainButton.isVisible) {
+        tg.MainButton.hide();
+    }
+    else {
+        tg.MainButton.setText("Вы выбрали стол!");
+        item = '2';
+        tg.MainButton.show();
+    }
+});
+
+btn3.addEventListener("click", function(){
+    if (tg.MainButton.isVisible) {
+        tg.MainButton.hide();
+    }
+    else {
+        tg.MainButton.setText("Вы выбрали шкаф!");
+        item = '3';
+        tg.MainButton.show();
+    }
+});
+
+btn4.addEventListener("click", function(){
+    if (tg.MainButton.isVisible) {
+        tg.MainButton.hide();
+    }
+    else {
+        tg.MainButton.setText("Вы выбрали стул!");
+        item = '4';
+        tg.MainButton.show();
+    }
+});
+
+btn5.addEventListener("click", function(){
+    if (tg.MainButton.isVisible) {
+        tg.MainButton.hide();
+    }
+    else {
+        tg.MainButton.setText("Вы выбрали кровать!");
+        item = '5';
+        tg.MainButton.show();
+    }
+});
+
+btn6.addEventListener("click", function(){
+    if (tg.MainButton.isVisible) {
+        tg.MainButton.hide();
+    }
+    else {
+        tg.MainButton.setText("Вы выбрали комод!");
+        item = '6';
         tg.MainButton.show();
     }
 });
@@ -24,3 +86,12 @@ btn.addEventListener("click", function(){
 Telegram.WebApp.onEvent("mainButtonClicked", function(){
     tg.sendData(item);
 });
+
+let usercard = document.getElementById("usercard");
+
+let p = document.createElement("p");
+
+p.innerText = `${tg.initDataUnsafe.user.first_name}
+${tg.initDataUnsafe.user.user_id}`;
+
+usercard.appendChild(p);
